@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(252, 235, 205);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    background-color: darkgoldenrod;
+        box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+section {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#dice-roller-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#header h2 {
+    font-size: 2rem;
+    font-family: "Oldenburg", serif;
+    color: antiquewhite;
+}
+
+.dice-roller {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.dice-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dice-option {
+    width: 110px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: all .5s;
+}
+
+.dice-option:hover {
+    letter-spacing: 1px;
+    border: 1.5px solid darkgoldenrod;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.dice-option.selected {
+    background-color: rgb(245, 199, 82);
+}
+
+#dice-roller-container button {
+    width: 110px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(252, 235, 205);
+    border: 0.5px solid darkgoldenrod;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+#dice-roller-container button:hover {
+    letter-spacing: 1px;
+    border: 1.5px solid darkgoldenrod;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.dice-result {
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 300px;
+    height: 141px;
+    width: 100%;
+}
+
+.dice-result p {
+    font-weight: 300;
+}
+
+.dice-result .result {
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+#result.critic {
+    color: green;
+    font-weight: 800;
+}
+
+#result.criticFail {
+    color: red;
+    font-weight: 800;
+}
+
+.dice-result .result span {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+.dice-history {
+    flex: 25%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    height: 375px;
+    border: 1px solid darkgoldenrod;
+    border-radius: 25px;
+    background-color: antiquewhite;
+}
+
+.dice-history h4 {
+    font-family: "Oldenburg", serif;
+    font-size: .8rem;
+    text-align: center;
+    background-color: darkgoldenrod;
+    border-radius: 25px 25px 0 0;
+    padding: 5px;
+}
+
+.dice-history .history {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.history .history-item {
+    border-bottom: .3px solid rgb(0, 0, 0, 0.3);
+    padding-bottom: 1.5px;
+}
+
+.history .history-item.last {
+    font-size: 1.3rem;
+    margin: 5px 0;
+    border-bottom: 2px solid rgb(184, 134, 11, 0.7);
+}
+
+.history .history-item span {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 1024px) {
+    section {
+        max-width: 90%;
+    }
+
+    #dice-roller-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dice-history {
+        flex: initial; /* Reseta as propriedades flex */
+        width: 100%;
+        max-width: 500px;
+        align-self: center;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}

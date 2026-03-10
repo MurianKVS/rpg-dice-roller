@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller V.1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <h2 class="title">The Dice Roller - V.1</h2>
+    </header>
+    <section id="dice-roller-container">
+        <div class="dice-roller">
+            <h4>Escolha um dado:</h4>
+            <div id="dice-selector" class="dice-options">
+                <div class="dice-option" data-value="2">d2</div>
+                <div class="dice-option" data-value="4">d4</div>
+                <div class="dice-option" data-value="6">d6</div>
+                <div class="dice-option" data-value="8">d8</div>
+                <div class="dice-option" data-value="10">d10</div>
+                <div class="dice-option" data-value="12">d12</div>
+                <div class="dice-option" data-value="20">d20</div>
+                <div class="dice-option" data-value="100">d100</div>
+            </div>
+            <button id="roll-button">Rolar</button>
+            <div class="dice-result">
+                <p>Resultado: </p>
+                <div class="result">
+                    <p id="result"></p>
+                    <p><span id="roll"></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="dice-history">
+            <h4>Histórico de Rolagens</h4>
+        <div id="history" class="history">
+            <!-- Lista Histórico de Rolagens-->
+        </div>
+    </section>
+    <script src="scripts.js"></script>
+</body>
+</html>
