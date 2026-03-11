@@ -78,6 +78,28 @@ section {
     background-color: rgb(245, 199, 82);
 }
 
+.custom-dice {
+    width: 110px;
+    height: 50px;
+    border: .5px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(252, 235, 205);
+    transition: all .5s;
+}
+
+.custom-dice:focus {
+    outline: none;
+    border: 1.5px solid darkgoldenrod;
+    background-color: rgb(253, 232, 180);
+}
+
+.custom-dice.selected {
+    border: 1.5px solid darkgoldenrod;
+    background-color: rgb(253, 232, 180);
+}
+
 #dice-roller-container button {
     width: 110px;
     height: 50px;
